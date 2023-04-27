@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header style="background-color: black;"><h1 style="color:white">For Worker.</h1></header>
+  <head style="background-color:black">
+    <title>Create account</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style ="background-color: black;">
+    <div class="jumbotron jumbotron-fluid" style="background-color:black;">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4"
+          >
+            <h1 class="mb-3 text-center" style ="color:white">Create a new account</h1>
+            <p class="lead" style="color:white">
+              Welcome to For Worker.
+            </p>
+            <form class="mb-3">
+              <div class="row">
+                <div class="form-group col-12 col-sm-6">
+                  <label for="firstName" style="color:white">First name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First name"
+                    id="firstName"
+                  />
+                </div>
+                <div class="form-group col-12 col-sm-6">
+                  <label for="lastName" style="color:white">Last name:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last name"
+                    id="lastName"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" style="color:white">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="example@example.com"
+                  id="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password" style="color:white">Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  required
+                />
+              </div>
+              <label style="color:white">Birthday:</label>
+              <div class="row no-gutters">
+                <div class="form-group col-4">
+                    <!--not working well in the frontend side no numbers as opitions appears to choose a day!!-->
+                  <label for="birthday-day" class="sr-only" style="color:white">Birthday day</label>
+                  <select class="form-control" id="birthday-day">
+                    <option value="">Day</option>
+                    
+                  </select>
+                </div>
+                <div class="form-group col-4">
+                  <label for="birthdayMonth" class="sr-only"
+                    >Birthday month</label>
+                  <!--golbal thing we did by deafulit -->
+                  <select class="form-control" id="birthdayMonth">
+                    <option value="">Month</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                  </select>
+                </div>
+                <div class="form-group col-4">
+                  <label for="birthdayYear" class="sr-only"
+                    >Birthday year</label>
+                  <select class="form-control" id="birthdayYear">
+                    <option value="">Year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-check form-check-inline">
+                <label class="form-check-label" style="color: white;">
+                  <input 
+                    type="radio"
+                    name="exampleRadios"
+                    id="exampleRadios1"
+                    class="form-check-input"
+                    value="optionOne"
+                    checked
+                  />
+                  Man
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <label class="form-check-label" style="color: white;">
+                  <input
+                    type="radio"
+                    name="exampleRadios"
+                    id="exampleRadios2"
+                    class="form-check-input"
+                    value="optionTwo"
+                  />
+                  Woman
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block mb-3">
+                Create account
+              </button>
+              <div class="alert alert-info small" role="alert">
+                By clicking above you agree to our
+                <a href="#" class="alert-link">Terms &amp; Conditions</a> and
+                our <a href="#" class="alert-link">Privacy Policy</a>.
+              </div>
+              <div class="text-center">
+                <p style="color: white;">or</p>
+                <a href="#" class="btn btn-success">Login</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- dynamic to choose a year for the birthday-->
+    <script>
+        const select = document.getElementById("birthdayYear");
+        const currentYear = new Date().getFullYear();
+        const earliestYear = 1900; // Change this to set the earliest year to display
+
+        for (let year = currentYear; year >= earliestYear; year--) {
+          const option = document.createElement("option");
+          option.value = year;
+          option.text = year;
+          select.appendChild(option);
+    }
+
+
+    </script>
+<!-- not working well in the frontend side-->
+    <script>
+   const select = document.getElementById("birthday-day");
+
+
+  
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const option = document.createElement("option");
+    option.value = day;
+    option.text = day;
+    select.appendChild(option);
+  }
+
+
+const monthSelect = document.getElementById("birthday-month");
+monthSelect.addEventListener("change", updateDays);
+
+
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
