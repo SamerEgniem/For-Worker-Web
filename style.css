@@ -10,7 +10,29 @@
 body {
     background: #eceaff;
 }
-
+table{
+  width: 100%;
+  min-width: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  position: relative;
+  border-spacing: 30px;
+  border-collapse: separate;
+}
+td{
+  border-width:1px; 
+  border-style:solid; 
+  border-color:black; 
+  padding: 10px;
+  width: 300px; 
+}
+.card-img-top{
+  width: 350px; 
+  height: 300px;
+}
 nav { 
   background: #1a1a1a;
   width: 100%;
@@ -25,9 +47,6 @@ nav {
   min-width: 100vh;
   color: #535252;
 }
-.logo {
-  width: 120px;
-}
 .user-pic {
   width: 40px;
   border-radius: 50%;
@@ -39,6 +58,7 @@ nav ul {
   text-align: right;
 }
 nav ul li {
+  
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
@@ -110,4 +130,38 @@ nav ul li a{
 }
 .sub-menu-link:hover p {
   font-weight: 600;
+}
+
+
+
+/*css for search in dashboard page.*/
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: white;
 }

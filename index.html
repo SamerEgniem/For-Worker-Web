@@ -8,7 +8,6 @@
 
 
   <title>For Worker.</title>
-  <link rel="stylesheet" href="./css/style.css" />
   
   <!-- Latest compiled and minified CSS -->
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -38,13 +37,15 @@
     <div class="hero">
       <nav>
         <h1 style="color: aliceblue;">For Worker.</h1>
-          <!--<img src="" class="logo">-->
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+        <div>
+          <form class="search-form">
+            <input type="text" placeholder="Search...">
+            <button type="submit" style="background-color: burlywood;">Search</button>
+          </form>
+        </div>
+          <li><a href="#" style="color:burlywood;">Home</a></li>
+          <li><a href="#" style="color: burlywood;">Features</a></li>
           <img src="./images/Faraj.jpg" class="user-pic" onclick="toggleMenu()">
-
           <div class="sub-menu-wrap" id="subMenu">
               <div class="sub-menu">
                   <div class="user-info">
@@ -76,87 +77,84 @@
           </div>
       </nav>
   </div>
-    
   </header>
 
   <main class="main">
-
-    
     <div class = "row">
-      <table style="margin-top: 100px; margin-left: 190px;">
-        <td style="border-width:1px; border-style:solid; border-color:black; padding: 50px;width: 300px; margin-left:25rem; ">
+      <table >
+        <tr>
+          <td>
+            <div class="card" style="width: 22rem;" >
+              <img src="./images/Houses.jpg" class="card-img-top">
+              <div class="card-body">
+                  <h5 class="card-title">FOR HOUSE</h5>
+                  <p class="card-text">Buying and repairs for your house</p>
+                  <a href="#" class="btn btn-primary">Go to Houses</a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="card" style="width: 22rem;" >
+              <img src="./images/Yard.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">FOR YARD</h5>
+                <p class="card-text">Reapirs for yard, pool and more </p>
+                <a href="#" class="btn btn-primary">Go To YARD</a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="card" style="width: 22rem;" >
+              <img src="./images/Car.jpg" class="card-img-top" >
+              <div class="card-body">
+                <h5 class="card-title">FOR CAR</h5>
+                <p class="card-text">Fixes, repairs for Cars and more</p>
+                <a href="#" class="btn btn-primary">Go To Car</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="card" style="width: 22rem;" >
+              <img src="./images/Constructions.webp" class="card-img-top" >
+              <div class="card-body">
+                  <h5 class="card-title">FOR CONSTRUCTIONS </h5>
+                  <p class="card-text">Constructions for house, offices and more</p>
+                  <a href="#" class="btn btn-primary">Go To Constructions</a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="card" style="width: 22rem;" >
+              <img src="./images/Tech.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">FOR TECH</h5>
+                <p class="card-text">Repairs, fixes for phone and more</p>
+                <a href="#" class="btn btn-primary">Go To Tech</a>
+              </div>
+            </div>
+          </td>
+        </td>
+        <td>
           <div class="card" style="width: 22rem;" >
-            <img src="..." class="card-img-top" alt="...">
+            <img src="./images/Coming Soon.avif" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">FOR HOUSE</h5>
-                <p class="card-text">Buying and quick fixes for your house</p>
-                <a href="#" class="btn btn-primary">Go to Houses</a>
+              <h5 class="card-title">Coming Soon</h5>
+              <p class="card-text">Coming Soon</p>
+              <a href="#" class="btn btn-primary">Coming Soon :D</a>
             </div>
           </div>
         </td>
-        <td style="width: 70px">
-        </td>
-        <td style="border-width:1px; border-style:solid; border-color:black; padding: 50px;height: 300px; width: 300px; margin-left:100rem;">
-          <div class="card" style="width: 22rem;" >
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">FOR OUTSIDE</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go To Outside</a>
-            </div>
-          </div>
-        </td>
-      </td>
-      <td style="width: 70px"></td>
-      <td style="border-width:1px; border-style:solid; border-color:black; padding: 50px;height: 300px; width: 300px; margin-left:100rem;">
-        <div class="card" style="width: 22rem;" >
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">FOR CAR</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go To Car</a>
-          </div>
-        </div>
-      </td>
-      <table style="margin-top: 70px; margin-left: 190px;">
-        <td style="border-width:1px; border-style:solid; border-color:black; padding: 50px;width: 300px; margin-left:25rem; ">
-          <div class="card" style="width: 22rem;" >
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">FOR CONSTRUCTIONS </h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go To Constructions</a>
-            </div>
-          </div>
-        </td>
-        <td style="width: 70px">
-          
-        </td>
-        <td style="border-width:1px; border-style:solid; border-color:black; padding: 50px;height: 300px; width: 300px; margin-left:100rem;">
-          <div class="card" style="width: 22rem;" >
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">FOR TECH</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go To Tech</a>
-            </div>
-          </div>
-        </td>
-      </td>
-      <td style="width: 70px"></td>
-      <td style="border-width:1px; border-style:solid; border-color:black; padding: 50px;height: 300px; width: 300px; margin-left:100rem;">
-        <div class="card" style="width: 22rem;" >
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Coming Soon</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Coming Soon :D</a>
-          </div>
-        </div>
-      </td>
-      </table>
+        </tr>
     </table>
   </div>
+  <footer>
+    <nav style="justify-content:space-evenly;">
+      <li><a href="#" style="color:burlywood;" >About</a></li>
+      <li><a href="#" style="color: burlywood;">Contact</a></li>
+    </nav>
+  </footer>
     <!-- Products  -->
     <!--<div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
