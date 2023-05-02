@@ -21,8 +21,8 @@
       <nav>
         <h1 style="color: aliceblue;">For Worker.</h1>
         <div>
-          <form class="search-form">
-            <input type="text" placeholder="Search...">
+          <form onsubmit="searchbar(); return false;" class="search-form" >
+            <input type="text" id="search" placeholder="Search...">
             <button type="submit" style="background-color: burlywood;">Search</button>
           </form>
         </div>
@@ -64,7 +64,7 @@
 
   <main class="main">
     <div class = "row">
-      <table >
+      <table id ="tbl1">
         <tr>
           <td>
             <div class="card" style="width: 22rem;" >
@@ -72,7 +72,7 @@
               <div class="card-body">
                   <h5 class="card-title">FOR HOUSE</h5>
                   <p class="card-text">Buying and repairs for your house</p>
-                  <a href="#" class="btn btn-primary">Go to Houses</a>
+                  <a href="houses.html" class="btn btn-primary">Go to Houses</a>
               </div>
             </div>
           </td>
@@ -82,7 +82,7 @@
               <div class="card-body">
                 <h5 class="card-title">FOR YARD</h5>
                 <p class="card-text">Reapirs for yard, pool and more </p>
-                <a href="#" class="btn btn-primary">Go To YARD</a>
+                <a href="yard.html" class="btn btn-primary">Go To Yard</a>
               </div>
             </div>
           </td>
@@ -92,7 +92,7 @@
               <div class="card-body">
                 <h5 class="card-title">FOR CAR</h5>
                 <p class="card-text">Fixes, repairs for Cars and more</p>
-                <a href="#" class="btn btn-primary">Go To Car</a>
+                <a href="car.html" class="btn btn-primary">Go To Car</a>
               </div>
             </div>
           </td>
@@ -104,7 +104,7 @@
               <div class="card-body">
                   <h5 class="card-title">FOR CONSTRUCTIONS </h5>
                   <p class="card-text">Constructions for house, offices and more</p>
-                  <a href="#" class="btn btn-primary">Go To Constructions</a>
+                  <a href="construction.html" class="btn btn-primary">Go To Constructions</a>
               </div>
             </div>
           </td>
@@ -114,7 +114,7 @@
               <div class="card-body">
                 <h5 class="card-title">FOR TECH</h5>
                 <p class="card-text">Repairs, fixes for phone and more</p>
-                <a href="#" class="btn btn-primary">Go To Tech</a>
+                <a href="tech.html" class="btn btn-primary">Go To Tech</a>
               </div>
             </div>
           </td>
@@ -190,6 +190,25 @@
   </footer>
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
+
+  <script>
+    function searchbar() {
+      var input = document.getElementById("search").value.toLowerCase();
+      if (input.includes("house")) {
+        window.location.href = "houses.html";
+      } else if (input.includes("yard")) {
+        window.location.href = "yard.html";
+      } else if (input.includes("car")) {
+        window.location.href = "car.html";
+      } else if (input.includes("construction")) {
+        window.location.href = "construction.html";
+      } else if (input.includes("tech")) {
+        window.location.href = "tech.html";
+      } else {
+        alert("Sorry, we couldn't find any matching category.");
+      }
+    }
+  </script>
 
   <script>
     let subMenu = document.getElementById("subMenu");
