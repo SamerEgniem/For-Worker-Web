@@ -36,7 +36,7 @@
                       <h2>Emad Farajen</h2>
                   </div>
                   <hr>
-                  <a href="#" class="sub-menu-link">
+                  <a href="edit-profile.html" class="sub-menu-link">
                       <img src="./images/profile.png" alt="">
                       <p>Edit Profile</p>
                       <span></span>
@@ -51,7 +51,7 @@
                       <p>Help & Support</p>
                       <span></span>
                   </a>
-                  <a href="#" class="sub-menu-link">
+                  <a href="Log-in.html" class="sub-menu-link">
                       <img src="./images/logout.png" alt="">
                       <p>Log-Out</p>
                       <span></span>
@@ -118,10 +118,9 @@
               </div>
             </div>
           </td>
-        </td>
         <td>
           <div class="card" style="width: 22rem;" >
-            <img src="./images/Coming Soon.avif" class="card-img-top">
+            <img src="./images/coming-soon.webp" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Coming Soon</h5>
               <p class="card-text">Coming Soon</p>
@@ -142,31 +141,6 @@
   </footer>
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
-
-  <script>
-    function searchbar() {
-      var input = document.getElementById("search").value.toLowerCase();
-      if (input.includes("house")) {
-        window.location.href = "houses.html";
-      } else if (input.includes("yard")) {
-        window.location.href = "yard.html";
-      } else if (input.includes("car")) {
-        window.location.href = "car.html";
-      } else if (input.includes("construction")) {
-        window.location.href = "construction.html";
-      } else if (input.includes("tech")) {
-        window.location.href = "tech.html";
-      } else {
-        alert("Sorry, we couldn't find any matching category.");
-      }
-    }
-  </script>
-
-  <script>
-    let subMenu = document.getElementById("subMenu");
-    function toggleMenu(){
-      subMenu.classList.toggle("open-menu");
-    }
-  </script>
+  <script src="./ScriptFunc.js"></script>
 </body>
 </html>

@@ -2,19 +2,61 @@
 
 <html lang="en">
   <link rel="stylesheet" href="./style.css">
-    <header> 
-      <h1 style="background-color: black; color:aliceblue;  ;"><span style="position:relative; left: 120px; font-size: x-large; font-weight: bold; bottom: 6px;">For Worker.</span></h1> 
-    </header>
+  <link rel="stylesheet" href="./FandH.css">
+  <title>Cars</title>
 <body>
+  <header class="header">
+    <div class="hero">
+      <nav>
+        <h1 style="color: aliceblue;">For Worker.</h1>
+        <div>
+          <form onsubmit="searchbar(); return false;" class="search-form" >
+            <input type="text" id="search" placeholder="Search...">
+            <button type="submit" style="background-color: burlywood;">Search</button>
+          </form>
+        </div>
+          <li><a href="index.html" style="color:burlywood;">Home</a></li>
+          <li><a href="#" style="color: burlywood;">Features</a></li>
+          <img src="./images/Faraj.jpg" class="user-pic" onclick="toggleMenu()">
+          <div class="sub-menu-wrap" id="subMenu">
+              <div class="sub-menu">
+                  <div class="user-info">
+                      <img src="./images/Faraj.jpg">
+                      <h2>Emad Farajen</h2>
+                  </div>
+                  <hr>
+                  <a href="edit-profile.html" class="sub-menu-link">
+                      <img src="./images/profile.png" alt="">
+                      <p>Edit Profile</p>
+                      <span></span>
+                  </a>
+                  <a href="#" class="sub-menu-link">
+                      <img src="./images/setting.png" alt="">
+                      <p>Settings & Privacy</p>
+                      <span></span>
+                  </a>
+                  <a href="#" class="sub-menu-link">
+                      <img src="./images/help.png" alt="">
+                      <p>Help & Support</p>
+                      <span></span>
+                  </a>
+                  <a href="Log-in.html" class="sub-menu-link">
+                      <img src="./images/logout.png" alt="">
+                      <p>Log-Out</p>
+                      <span></span>
+                  </a>
+              </div>
+          </div>
+      </nav>
+  </div>
+  </header>
     <h1 style="text-align: center;">yard</h1>
+    <script src="./ScriptFunc.js"></script>
 </body>
 <footer>
-    <nav style="justify-content:space-evenly;
-      background: #1a1a1a; width: 100%;
-      padding: 10px 10%; display: flex;
-      align-items: center; position: fixed; bottom: 0;">
-      <li><a href="#" style="color:burlywood;" >About</a></li>
-      <li><a href="#" style="color: burlywood;">Contact</a></li>
+    <nav>
+      <li><a href="#" >About</a></li>
+      <li><a href="#" >Contact</a></li>
     </nav>
   </footer>
 </html>
