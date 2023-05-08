@@ -9,7 +9,7 @@ footer nav{
       bottom: 0;
 }
 
-span{
+span a{
     position:relative; 
     left: 120px; 
     font-size: x-large; 
