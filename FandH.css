@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+
 footer nav{
     justify-content:space-evenly;
-      background: #1a1a1a; 
-      width: 100%;
-      padding: 10px 10%; 
-      display: flex;
-      align-items: center; 
-      position: fixed; 
-      bottom: 0;
+    background: #1a1a1a; 
+    width: 100%;
+    padding: 10px 10%; 
+    display: flex;
+    align-items: center; 
+    /*position: fixed;*/ /*this option only if the page isn't full*/
+    bottom: 0;
 }
 
 span a{
@@ -19,3 +21,72 @@ span a{
 a{
     color: burlywood;
 }
+nav ul {
+    width: 100%;
+    text-align: right;
+  }
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+  nav ul li a{
+    color: #fff;
+    text-decoration: none;
+  }
+  nav { 
+    background: #1a1a1a;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .hero {
+    width: 100%;
+    min-width: 100vh;
+    color: #535252;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',serif;
+  }
+  /*css for search in dashboard page.*/
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .search-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .search-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .search-form button:hover {
+    background-color: white;
+  }
+  h1{
+    color: aliceblue;
+  }
+  a{
+    text-decoration: none;
+  }
