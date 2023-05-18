@@ -26,8 +26,8 @@
             <button type="submit" style="background-color: burlywood;">Search</button>
           </form>
         </div>
-          <li><a href="#" style="color:burlywood;">Home</a></li>
-          <li><a href="#" style="color: burlywood;">Features</a></li>
+          <!-- <li><a href="index.html" style="color:burlywood;">Home</a></li>
+          <li><a href="#" style="color: burlywood;">Features</a></li> -->
           <img src="./images/Faraj.jpg" class="user-pic" onclick="toggleMenu()">
           <div class="sub-menu-wrap" id="subMenu">
               <div class="sub-menu">
@@ -36,7 +36,7 @@
                       <h2>Emad Farajen</h2>
                   </div>
                   <hr>
-                  <a href="#" class="sub-menu-link">
+                  <a href="edit-profile.html" class="sub-menu-link">
                       <img src="./images/profile.png" alt="">
                       <p>Edit Profile</p>
                       <span></span>
@@ -51,7 +51,7 @@
                       <p>Help & Support</p>
                       <span></span>
                   </a>
-                  <a href="#" class="sub-menu-link">
+                  <a href="Log-in.html" class="sub-menu-link">
                       <img src="./images/logout.png" alt="">
                       <p>Log-Out</p>
                       <span></span>
@@ -68,31 +68,31 @@
         <tr>
           <td>
             <div class="card" style="width: 22rem;" >
-              <img src="./images/Houses.jpg" class="card-img-top">
+              <img src="./images/Home.jpg" class="card-img-top">
               <div class="card-body">
                   <h5 class="card-title">FOR HOUSE</h5>
                   <p class="card-text">Buying and repairs for your house</p>
-                  <a href="houses.html" class="btn btn-primary">Go to Houses</a>
+                  <a href="houses.html" class="btn btn-primary" style="color:rgb(134, 34, 34);">Go to Houses</a>
               </div>
             </div>
           </td>
           <td>
             <div class="card" style="width: 22rem;" >
-              <img src="./images/Yard.jpg" class="card-img-top">
+              <img src="./images/Garden.jpg" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">FOR YARD</h5>
                 <p class="card-text">Reapirs for yard, pool and more </p>
-                <a href="yard.html" class="btn btn-primary">Go To Yard</a>
+                <a href="yard.html" class="btn btn-primary" style="color:rgb(134, 34, 34);">Go To Yard</a>
               </div>
             </div>
           </td>
           <td>
             <div class="card" style="width: 22rem;" >
-              <img src="./images/Car.jpg" class="card-img-top" >
+              <img src="./images/Cars.jpg" class="card-img-top" >
               <div class="card-body">
                 <h5 class="card-title">FOR CAR</h5>
                 <p class="card-text">Fixes, repairs for Cars and more</p>
-                <a href="car.html" class="btn btn-primary">Go To Car</a>
+                <a href="car.html" class="btn btn-primary" style="color:rgb(134, 34, 34);">Go To Car</a>
               </div>
             </div>
           </td>
@@ -104,7 +104,7 @@
               <div class="card-body">
                   <h5 class="card-title">FOR CONSTRUCTIONS </h5>
                   <p class="card-text">Constructions for house, offices and more</p>
-                  <a href="construction.html" class="btn btn-primary">Go To Constructions</a>
+                  <a href="construction.html" class="btn btn-primary" style="color:rgb(134, 34, 34);">Go To Constructions</a>
               </div>
             </div>
           </td>
@@ -114,107 +114,33 @@
               <div class="card-body">
                 <h5 class="card-title">FOR TECH</h5>
                 <p class="card-text">Repairs, fixes for phone and more</p>
-                <a href="tech.html" class="btn btn-primary">Go To Tech</a>
+                <a href="tech.html" class="btn btn-primary" style="color:rgb(134, 34, 34);">Go To Tech</a>
               </div>
             </div>
           </td>
-        </td>
         <td>
           <div class="card" style="width: 22rem;" >
-            <img src="./images/Coming Soon.avif" class="card-img-top">
+            <img src="./images/coming-soon.webp" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Coming Soon</h5>
               <p class="card-text">Coming Soon</p>
-              <a href="#" class="btn btn-primary">Coming Soon :D</a>
+              <a href="#" class="btn btn-primary" style="color:rgb(134, 34, 34);">Coming Soon :D</a>
             </div>
           </div>
         </td>
         </tr>
     </table>
   </div>
-    <!-- Products  -->
-    <!--<div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
-        </div>
-      </div>
-      <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
-        <div class="cart" id="my-cart">
-          <table class="table">
-            <thead>
-              <h1>My-Cart</h1>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Total Added-Products:</th>
-                <td><span id="total-Products">0</span></td>
-              </tr>
-              <tr>
-                <th>Price:</th>
-                <td>$ <span id="price">0</span></td>
-              </tr>
-              <tr>
-                <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
-              </tr>
-              <tr>
-                <th>Total-Tax:</th>
-                <td>$ <span id="total-tax">0</span></td>
-              </tr>
-              <tr>
-                <th scope="row">Total</th>
-                <td colspan="2">$ <span id="total">0</span></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
-          </div>
-        </div>
-      </div>
-    </div>-->
   </main>
   
   <footer>
     <nav style="justify-content:space-evenly;">
-      <li><a href="#" style="color:burlywood;" >About</a></li>
+      <li><a href="about.html" style="color:burlywood;" >About</a></li>
       <li><a href="#" style="color: burlywood;">Contact</a></li>
     </nav>
   </footer>
   <!-- add javascript  file  -->
-  <script src="./js/app.js"></script>
-
-  <script>
-    function searchbar() {
-      var input = document.getElementById("search").value.toLowerCase();
-      if (input.includes("house")) {
-        window.location.href = "houses.html";
-      } else if (input.includes("yard")) {
-        window.location.href = "yard.html";
-      } else if (input.includes("car")) {
-        window.location.href = "car.html";
-      } else if (input.includes("construction")) {
-        window.location.href = "construction.html";
-      } else if (input.includes("tech")) {
-        window.location.href = "tech.html";
-      } else {
-        alert("Sorry, we couldn't find any matching category.");
-      }
-    }
-  </script>
-
-  <script>
-    let subMenu = document.getElementById("subMenu");
-    function toggleMenu(){
-      subMenu.classList.toggle("open-menu");
-    }
-  </script>
+  <!--<script src="./js/app.js"></script>-->
+  <script src="./ScriptFunc.js"></script>
 </body>
 </html>
