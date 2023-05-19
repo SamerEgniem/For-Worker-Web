@@ -49,7 +49,7 @@ $table4 = "CREATE TABLE review(
 
 )";
 
-$table5 = "CREATE TABLE has job(
+$table5 = "CREATE TABLE has_job(
     FOREIGN KEY (worker_id) REFERENCES WORKER(id),
     FOREIGN KEY (profession_id)REFERENCES profession(id)
 )";
