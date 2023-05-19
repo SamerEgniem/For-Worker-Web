@@ -1,9 +1,5 @@
 <?php
- $dbhost = 'localhost:3036';
- $dbuser = 'root';
- $dbpass = '';
- $dbname = 'forworkerdb';
- $conn = mysqli_connect($dbhost,$dbuser, $dbpass,$dbname);
+  
 
 // Create connection
 //$conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
