@@ -1,15 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
+ $dbhost = 'localhost:3036';
+ $dbuser = 'root';
+ $dbpass = '';
+ $dbname = 'forworkerdb';
+ $conn = mysqli_connect($dbhost,$dbuser, $dbpass,$dbname);
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+echo "connection success";
 // sql to create table
 
 $table1 = "CREATE TABLE WORKER(
@@ -25,6 +27,7 @@ $table1 = "CREATE TABLE WORKER(
 $table2 = "CREATE TABLE profession(
     id INT UNSIGNED AUTO_INCREAMENT PRIMARY KEY ,
     jobname VARCHAR(60),
+    FOREIGN KEY (category_id)REFERENCES category(id)
   
 
 )";
@@ -41,11 +44,17 @@ $table4 = "CREATE TABLE review(
     credibility VARCHAR(60),
     Punctual  VARCHAR(60),
     proficiency VARCHAR(60),
-    cost VARCHAR(60)
+    cost VARCHAR(60),
+    FOREIGN KEY (worker_id)REFERENCES WORKER(id),
 
 )";
 
-$tables = [$table1, $table2, $table3,$table4];
+$table5 = "CREATE TABLE has job(
+    FOREIGN KEY (worker_id) REFERENCES WORKER(id),
+    FOREIGN KEY (profession_id)REFERENCES profession(id)
+)";
+
+$tables = [$table1, $table2, $table3,$table4,$table5];
 
 foreach($tables as $k => $sql){
     $query = @$conn->query($sql);
