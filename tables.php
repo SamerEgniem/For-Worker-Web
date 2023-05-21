@@ -1,10 +1,18 @@
-
-
 <?php
-
-
-
-
+function CheckQuery($con,$data){
+    if ($con->query($data) === TRUE) {
+        echo "Table created successfully";
+    } else {
+        echo "Error creating table: " . $con->error;
+    }
+}
+function checkInsert($con,$data){
+    if ($con->query($data) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $data . "<br>" . $con->error;
+    }
+}
 if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
     echo 'We don\'t have mysqli!!!';
 } else {
@@ -14,18 +22,12 @@ $servername ="localhost";
 $username = "root";
 $password ="admin";
 $dbname  = "fwdb";
-
 $conn = new mysqli($servername, $username,$password,$dbname,3306);
-
 $sql = "CREATE TABLE Category (
         id INT(6) AUTO_INCREMENT PRIMARY KEY, 
         category_name VARCHAR(60) NOT NULL
 )";
-if ($conn->query($sql) === TRUE) {
-    echo "Table created successfully";
-} else {
-    echo "Error creating table: " . $conn->error;
-}
+CheckQuery($conn,$sql);
 sleep(2);
 $sql1 = "CREATE TABLE Profession (
         id INT(6) AUTO_INCREMENT PRIMARY KEY,
@@ -35,27 +37,68 @@ $sql1 = "CREATE TABLE Profession (
 )";
 
 sleep(2);
-if ($conn->query($sql1) === TRUE) {
-    echo "Table created successfully";
-} else {
-    echo "Error creating table: " . $conn->error;
-}
+CheckQuery($conn,$sql1);
 
 $sqldata = "INSERT INTO Category (category_name)
-VALUES ('cars')";
-if ($conn->query($sqldata) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sqldata . "<br>" . $conn->error;
-}
+            VALUES ('cars')";
+checkInsert($conn,$sqldata);
 $sqldata = "INSERT INTO Profession (job_name,category_id)
-VALUES ('parts',1)";
-
-if ($conn->query($sqldata) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sqldata . "<br>" . $conn->error;
-}
-
+            VALUES ('Parts',1)";
+checkInsert($conn,$sqldata);
+$sqldata = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Tires',1)";
+checkInsert($conn,$sqldata);
+$sqldata = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Wash',1)";
+checkInsert($conn,$sqldata);
+$sqldata = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Body',1)";
+checkInsert($conn,$sqldata);
+$sqldata2 = "INSERT INTO Category (category_name)
+            VALUES ('House')";
+checkInsert($conn,$sqldata2);
+$sqldata2 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Carpenter',2)";
+checkInsert($conn,$sqldata2);
+$sqldata2 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Plumber',2)";
+checkInsert($conn,$sqldata2);
+$sqldata2 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Electricians',2)";
+checkInsert($conn,$sqldata2);
+$sqldata3 = "INSERT INTO Category (category_name)
+            VALUES ('Yard')";
+checkInsert($conn,$sqldata3);
+$sqldata3 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Gardener',3)";
+checkInsert($conn,$sqldata3);
+$sqldata3 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Pergola',3)";
+checkInsert($conn,$sqldata3);
+$sqldata3 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Pool',3)";
+checkInsert($conn,$sqldata3);
+$sqldata4 = "INSERT INTO Category (category_name)
+            VALUES ('construction')";
+checkInsert($conn,$sqldata4);
+$sqldata4 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Roofer',4)";
+checkInsert($conn,$sqldata4);
+$sqldata4 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Architect',4)";
+checkInsert($conn,$sqldata4);
+$sqldata4 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Civil Engineer',4)";
+checkInsert($conn,$sqldata4);
+$sqldata5 = "INSERT INTO Category (category_name)
+            VALUES ('Tech')";
+checkInsert($conn,$sqldata5);
+$sqldata5 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('Laptops',5)";
+checkInsert($conn,$sqldata5);
+$sqldata5 = "INSERT INTO Profession (job_name,category_id)
+            VALUES ('SmartPhones',5)";
+checkInsert($conn,$sqldata5);
 $conn->close();
 ?>
+  
