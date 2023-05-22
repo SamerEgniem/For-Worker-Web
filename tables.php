@@ -26,15 +26,15 @@ $conn = new mysqli($servername, $username,$password,$dbname,3306);
 $sql = "CREATE TABLE Category (
         id INT(6) AUTO_INCREMENT PRIMARY KEY, 
         category_name VARCHAR(60) NOT NULL
-)";
+        )";
 CheckQuery($conn,$sql);
 sleep(2);
 $sql1 = "CREATE TABLE Profession (
         id INT(6) AUTO_INCREMENT PRIMARY KEY,
         job_name NVARCHAR(255),
         category_id INT,
-    FOREIGN KEY (category_id) REFERENCES Category(id)
-)";
+        FOREIGN KEY (category_id) REFERENCES Category(id)
+        )";
 
 sleep(2);
 CheckQuery($conn,$sql1);
@@ -99,6 +99,18 @@ checkInsert($conn,$sqldata5);
 $sqldata5 = "INSERT INTO Profession (job_name,category_id)
             VALUES ('SmartPhones',5)";
 checkInsert($conn,$sqldata5);
+
+//Worker Table
+$sql = "CREATE TABLE Worker (
+    id INT(6) AUTO_INCREMENT PRIMARY KEY, 
+    Worker_name VARCHAR(60) NOT NULL,
+    Woker_Lastname VARCHAR(60) NOT NULL,
+    Phone INT(10) NOT NULL,
+    Worker_Description VARCHAR(60),
+    FOREIGN KEY (Profession_id) REFERENCES Profession(id)
+    FOREIGN KEY (category_id) REFERENCES Category(id)
+    )";
+CheckQuery($conn,$sql);
 $conn->close();
 ?>
   
