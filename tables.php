@@ -107,7 +107,9 @@ $sql = "CREATE TABLE Worker (
     Woker_Lastname VARCHAR(60) NOT NULL,
     Phone INT(10) NOT NULL,
     Worker_Description VARCHAR(60),
-    FOREIGN KEY (Profession_id) REFERENCES Profession(id)
+        Profession_id INT ,
+    FOREIGN KEY (Profession_id) REFERENCES Profession(id),
+    category_id INT ,
     FOREIGN KEY (category_id) REFERENCES Category(id)
     )";
 CheckQuery($conn,$sql);
