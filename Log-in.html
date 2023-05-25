@@ -31,7 +31,7 @@
             class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-4 offset-sd-3 offset-lg-4"
           >
             <h1 class="mb-3 text-center " style ="color: #1a1a1a;"> Log in</h1>
-            <form class="mb-3">
+            <form class="mb-3" action="sign-in.php" method="post">
               <div class="form-group">
                 <label for="Phone" style ="color: #1a1a1a;">Phone:</label>
                 <input
@@ -39,6 +39,7 @@
                   class="form-control"
                   placeholder="05*-*******"
                   id="Phone"
+                  name ="phonenumber"
                   required
                 />
               </div>

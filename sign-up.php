@@ -24,6 +24,7 @@ VALUES (?,?,?,?,'i work',1,1)";
 $stmt1=$conn->prepare($sql);
 $stmt1->execute([$user_name, $lastname, $hashed_password,$phonenumber]);
 
-
+header('Location:Log-in.html');
+exit();
 
 ?>
