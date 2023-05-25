@@ -105,7 +105,8 @@ $sql = "CREATE TABLE Worker (
     id INT(6) AUTO_INCREMENT PRIMARY KEY, 
     Worker_name VARCHAR(60) NOT NULL,
     Woker_Lastname VARCHAR(60) NOT NULL,
-    Phone INT(10) NOT NULL,
+    password VARCHAR(255) NOT NULL ,
+    Phone INT(10),
     Worker_Description VARCHAR(60),
         Profession_id INT ,
     FOREIGN KEY (Profession_id) REFERENCES Profession(id),
@@ -113,6 +114,7 @@ $sql = "CREATE TABLE Worker (
     FOREIGN KEY (category_id) REFERENCES Category(id)
     )";
 CheckQuery($conn,$sql);
-$conn->close();
+return $conn;
+$conn->close();//will never get here
 ?>
   
