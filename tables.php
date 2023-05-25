@@ -106,7 +106,7 @@ $sql = "CREATE TABLE Worker (
     Worker_name VARCHAR(60) NOT NULL,
     Woker_Lastname VARCHAR(60) NOT NULL,
     password VARCHAR(255) NOT NULL ,
-    Phone INT(10) NOT NULL,
+    Phone VARCHAR(20) NOT NULL,
     Worker_Description VARCHAR(60),
         Profession_id INT ,
     FOREIGN KEY (Profession_id) REFERENCES Profession(id),
