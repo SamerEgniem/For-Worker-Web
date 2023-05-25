@@ -3,6 +3,59 @@
     <!DOCTYPE html>
     <html>
     <head>
+      <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          min-width: 200px;
+          padding: 10px;
+          background-color: #f9f9f9;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        
+        .dropdown-content .option-link {
+          display: block;
+          margin-bottom: 5px;
+          color: #333;
+          text-decoration: none;
+        }
+        
+        .dropdown-content .option-link:hover {
+          color: #666;
+        }
+        
+        .dropdown-content .city-container{
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          min-width: 200px;
+          padding: 10px;
+          background-color: #f9f9f9;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content .city-container a {
+          display: block;
+          color: #333;
+          text-decoration: none;
+        }
+
+        .dropdown-content .city-container a:hover{
+          color: #666;;
+        }  
+      </style>
         <link rel="stylesheet" href="./FandH.css">
         <link rel="stylesheet" href="./SmallCategoryPage.css">
         <link rel="stylesheet" href="./DropDownCat.css">
@@ -12,6 +65,101 @@
         <div class="hero">
           <nav>
             <a href="CostumerIndex.html"><h1>For Worker.</h1></a>
+            <div class="dropdown">
+              <span id="dropdownText" style="color:burlywood;
+              text-decoration: none;
+            ">Category</span>
+              <div class="dropdown-content" id="dropdownContent">
+
+              </div>
+            </div>
+
+            <script>
+              var options=[
+                {
+                  name:"Car Parts",
+                  cities:["Haifa", "Nahariya", "Akko", "Nazareth", "Um Elfahem", "Arara", "Kofor Qaraa"]
+                },
+                {
+                  name:"Tires",
+                  cities:["Haifa", "Reshon", "Akko", "Nazareth", "Kofor Qaseem", "Arara", "Kofor Qaraa"]
+                },
+                {
+                  name:"Car Wash",
+                  cities:["Haifa", "Nahariya", "Baka", "Nazareth", "Um Elfahem", "Taybe", "Fradees"]
+                },
+                {
+                  name:"Body",
+                  cities:["Haifa", "Nahariya", "Akko", "Nazareth", "Um Elfahem", "Arara", "Tel Aviv"]
+                }
+              ];
+              var dropdownContent = document.getElementById("dropdownContent");
+              var activeCityContainer = null;
+
+              for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                var optionLink =document.createElement("a");
+                optionLink.href="#";
+                optionLink.textContent=option.name;
+                optionLink.classList.add("option-link")
+
+                var cityContainer =document.createElement("div");
+                cityContainer.classList.add("city-container");
+                
+
+
+                for(var j=0;j<option.cities.length;j++){
+                  var cityLink=document.createElement("a");
+                  cityLink.href="#";
+                  cityLink.textContent=option.cities[j];
+                  cityContainer.appendChild(cityLink);
+                }
+
+                optionLink.addEventListener("click", function (container){
+                  return function(){
+                    if (container.style.display === "block"){
+                      hideCityContainer(container);
+                    }else{
+                      if(activeCityContainer){
+                        hideCityContainer(activeCityContainer);
+                      }
+                      showCityContainer(container);
+                      activeCityContainer=container;
+                    }
+
+                  };
+                     
+                }(cityContainer));
+
+                optionLink.appendChild(cityContainer);
+                dropdownContent.appendChild(optionLink);
+              }
+
+              document.addEventListener("click", function (event){
+                if(!dropdownContent.contains(event.target)){
+                  if(activeCityContainer){
+                    hideCityContainer(activeCityContainer);
+                    activeCityContainer=null;
+                  }
+                  
+                }
+              });
+
+              function showCityContainer(container){
+                if (container){
+                  container.style.display="block";
+                }
+              }
+
+              function hideCityContainer(container){
+                if(container){
+                  container.style.display="none";
+                }
+              }
+
+             
+            </script>
+
             <div>
               <form onsubmit="searchbar(); return false;" class="search-form" >
                 <input type="text" id="search" placeholder="Search...">
