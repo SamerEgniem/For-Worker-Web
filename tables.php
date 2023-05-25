@@ -40,7 +40,7 @@ sleep(2);
 CheckQuery($conn,$sql1);
 
 $sqldata = "INSERT INTO Category (category_name)
-            VALUES ('cars')";
+            VALUES ('Cars')";
 checkInsert($conn,$sqldata);
 $sqldata = "INSERT INTO Profession (job_name,category_id)
             VALUES ('Parts',1)";
@@ -106,7 +106,7 @@ $sql = "CREATE TABLE Worker (
     Worker_name VARCHAR(60) NOT NULL,
     Woker_Lastname VARCHAR(60) NOT NULL,
     password VARCHAR(255) NOT NULL ,
-    Phone INT(10),
+    Phone INT(10) NOT NULL,
     Worker_Description VARCHAR(60),
         Profession_id INT ,
     FOREIGN KEY (Profession_id) REFERENCES Profession(id),
