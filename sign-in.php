@@ -2,11 +2,6 @@
 include "db_connect.php";
 session_start();
 
-
-
-
-echo "hello";
-
 if(isset($_POST['phonenumber']) && isset($_POST['password'])){
 	function validate($data){
 		$data = trim($data);
@@ -37,18 +32,8 @@ if(isset($_POST['phonenumber']) && isset($_POST['password'])){
 }else{
 	header("location:Log-in.html");
 }
-		
-		
-		
-		
-		
 		}
 	}
-	
-	
-
-	
-	
 	if (password_verify($pass, $hashedPassword)) {
     // Password is incorrect
 header("location:index.html");
