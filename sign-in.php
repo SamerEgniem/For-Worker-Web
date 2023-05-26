@@ -1,6 +1,8 @@
 <?php
+include "db_connect.php";
 session_start();
-include "de_connect.php";
+
+
 
 
 echo "hello";

@@ -1,5 +1,5 @@
 <?php
-include "de_connect.php";
+include "db_connect.php";
 
 // do not change any parameter here comment by tarik !!!
 $user_name = $_POST['firstName'] ;

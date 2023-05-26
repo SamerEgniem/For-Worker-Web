@@ -1,5 +1,6 @@
 <?php
-include "de_connect.php";
+include "db_connect.php";
+
 
 
 function CheckQuery($con,$data){
@@ -107,7 +108,7 @@ function checkInsert($con,$data){
     )";
     CheckQuery($conn, $sql);
 
-return $conn;
-$conn->close();//will never get here
+//return $conn;
+//$conn->close();//will never get here
 ?>
   
