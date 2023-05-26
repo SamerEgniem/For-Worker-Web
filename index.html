@@ -1,5 +1,13 @@
 <?php
+echo "hello";
 session_start();
+
+if (isset($_SESSION['Worker_name'])&& isset($_SESSION['Woker_Lastname'])) {
+echo "all good";
+}else{
+	
+	echo "all bad";
+}
 
 ?>
 
@@ -41,7 +49,7 @@ session_start();
                   <div class="user-info">
                       <img src="./images/Faraj.jpg">
                       <h2>
-                        <?php echo $_SESSION['Worker_name']; ?>
+                        <?php echo $_SESSION['Worker_name'];?>
                       </h2>
                   </div>
                   <hr>

@@ -12,29 +12,6 @@ function checkInsert($con,$data){
         echo "New record created successfully";
     }
 }
-if (!function_exists('CheckQuery')) {
-    function CheckQuery($con, $data)
-    {
-        if ($con->query($data) === TRUE) {
-            echo "Table created successfully";
-        }
-    }
-}
-
-if (!function_exists('checkInsert')) {
-    function checkInsert($con, $data)
-    {
-        if ($con->query($data) === TRUE) {
-            echo "New record created successfully";
-        }
-    }
-}
-if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
-    echo 'We don\'t have mysqli!!!';
-} else {
-    echo 'Phew we have it!';
-}
-
 
 
 
