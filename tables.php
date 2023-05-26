@@ -1,6 +1,5 @@
 <?php
-global $counter;
-$counter=0;
+include "de_connect.php";
 
 
 function CheckQuery($con,$data){
@@ -37,11 +36,6 @@ if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
 }
 
 
-$servername ="localhost";
-$username = "root";
-$password ="admin";
-$dbname  = "fwdb";
-$conn = new mysqli($servername, $username,$password,$dbname,3306);
 
 
 

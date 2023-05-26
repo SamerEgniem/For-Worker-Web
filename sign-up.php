@@ -1,4 +1,5 @@
 <?php
+include "de_connect.php";
 
 // do not change any parameter here comment by tarik !!!
 $user_name = $_POST['firstName'] ;
@@ -14,7 +15,6 @@ if(!($password_ == $confirmpassword)){
 
 printf($user_name);
 
-$conn = require __DIR__ . "/tables.php";
 
 
 
