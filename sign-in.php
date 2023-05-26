@@ -1,7 +1,9 @@
 <?php
-$conn=session_start();
+session_start();
 
-require_once("tables.php");
+$conn=require_once("tables.php");
+
+$myphonenumber = $_POST['phonenumber'];
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
