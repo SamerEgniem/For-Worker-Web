@@ -1,9 +1,9 @@
 <?php 
-$servername ="localhost";
-$username = "root";
-$password ="admin";
-$dbname  = "fwdb";
-$conn = mysqli_connect($servername, $username,$password,$dbname,3306);
+$servername ="sql209.byethost5.com";
+$username = "b5_34241873";
+$password ="admin123";
+$dbname  = "b5_34241873_forWorker";
+$conn = new mysqli($servername, $username,$password,$dbname);
 if (!$conn) {
 	echo "Connection failed!";
 }

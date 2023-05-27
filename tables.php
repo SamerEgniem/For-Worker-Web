@@ -25,7 +25,7 @@ function checkInsert($con,$data){
     sleep(2);
     $sql1 = "CREATE TABLE IF NOT EXISTS Profession (
         id INT(6) AUTO_INCREMENT PRIMARY KEY,
-        job_name NVARCHAR(255),
+        job_name VARCHAR(255),
         category_id INT,
         FOREIGN KEY (category_id) REFERENCES Category(id)
         )";
